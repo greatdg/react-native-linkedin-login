@@ -21,9 +21,9 @@ class LinkedinLogin {
 
   /**
    * Initializes the Linkedin Login module
-   * 
-   * @param {any} scopes 
-   * @returns {LinkedinLogin} 
+   *
+   * @param {any} scopes
+   * @returns {LinkedinLogin}
    */
   init(scopes) {
 
@@ -56,7 +56,7 @@ class LinkedinLogin {
       const picstr = 'https://api.linkedin.com/v1/people/~/picture-urls::(original)';
 
       RNLinkedinLogin.getRequest(picstr);
-    
+
     });
   }
 
@@ -70,7 +70,7 @@ class LinkedinLogin {
     return new Promise((resolve, reject) => {
       DeviceEventEmitter.addListener('linkedinGetRequest', (d) => {
         const data = JSON.parse(d.data);
-        
+
         if (data) {
           resolve(data);
         }
@@ -80,7 +80,7 @@ class LinkedinLogin {
         reject(error);
       });
 
-      const options = 'id,first-name,last-name,industry,email-address';
+      const options = 'id,first-name,last-name,industry,email-address,public-profile-url';
       const profilestr = `https://api.linkedin.com/v1/people/~:(${options})`;
 
       RNLinkedinLogin.getRequest(profilestr);

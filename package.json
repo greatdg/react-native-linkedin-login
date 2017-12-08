@@ -1,6 +1,6 @@
 {
   "name": "react-native-linkedin-login",
-  "version": "1.44.1",
+  "version": "1.44.2",
   "description": "React Native wrapper for native Linkedin login button and manager",
   "main": "index",
   "scripts": {
@@ -42,7 +42,7 @@
     "pre-commit": "^1.1.2"
   },
   "pre-commit": [
-   
+
   ],
   "rnpm": {
     "android": {
